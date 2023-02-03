@@ -10,6 +10,9 @@ export default async function handler(
     res.status(400).send("Bad request (no body)");
     return;
   }
+  if (req.query.secret !== process.env.MY_SECRET_TOKEN) {
+    return res.status(401).json({ message: "Invalid token" });
+  }
 
   const jsonBody = JSON.parse(body);
   console.log(jsonBody);

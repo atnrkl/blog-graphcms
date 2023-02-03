@@ -3,7 +3,6 @@ import FeaturedPosts from "./FeaturedPosts";
 
 import { getPosts } from "../services";
 import PostCard from "./PostCard";
-import Categories from "./Categories";
 
 type Props = {};
 
@@ -21,8 +20,8 @@ export default async function Main(props: Props) {
         </div>
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8">
+            {/* @ts-expect-error */}
             <PostWidgets />
-            <Categories />
           </div>
         </div>
       </div>

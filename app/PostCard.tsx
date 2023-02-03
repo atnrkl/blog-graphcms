@@ -10,7 +10,7 @@ type Props = {
 
 const PostCard = ({ post }: Props) => {
   return (
-    <div className="w-full p-8 my-10 bg-orange-100 rounded-md space-y-5">
+    <div className="w-full p-8 mb-8 bg-orange-100 rounded-md space-y-5">
       <Image
         className="w-full rounded-xl"
         src={post.featuredImage.url}
