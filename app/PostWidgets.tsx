@@ -12,6 +12,7 @@ const PostWidgets = async (props: Props) => {
       <nav className="h-full w-full">
         {titles.map((title) => (
           <WidgetCard
+            key={title.slug}
             slug={title.slug}
             title={title.title}
             author={title.author}
